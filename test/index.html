@@ -1,0 +1,65 @@
+<html>
+  <head><title>Test by hand</title></head>
+  <body id="index" onload="">
+  <div>
+    <h1>Default</h1>
+    <p>app.use(connect.router(rext_connect.routes()))</p>
+    <ul>
+    <li><a href="/rext/1/resources">List modules</a></li>
+    <li>
+      <a href="/rext/1/resources/module">List module versions</a>
+    </li>
+    <li>
+      <a href="/rext/1/resources/module/1.0.1">Get version 1.0.1 of module</a>
+    </li>
+    <li>
+      <a href="/rext/1/resources/module/1.0.1/destroy">Destroy version x.y.z of module</a>
+    </li>
+    <li>
+    <form action="/rext/1/resources/module/1.0.1/create" method="post">
+          Create version 1.0.1 of module
+          <input type="text" name="data" value="testo di prova"/>
+          <input type="submit" value="Try it" id="create"/> 
+    </form>
+    </li>
+    <li>
+    <form action="/rext/1/resources/module/1.0.1/update" method="post">
+          Update version 1.0.1 of module
+          <input type="text" name="data" value="new testo di prova"/>
+          <input type="submit" value="Try it"/>
+    </form>
+    </li>
+    </ul>
+  </div>
+  <div>
+    <h1>Myapp</h1>
+    <p>app.use(connect.router(rext_connect.routes({"prefix":prefix,"rext":rext})))</p>
+    <ul>
+    <li><a href="/myapp/1/resources">List modules</a></li>
+    <li>
+      <a href="/myapp/1/resources/module">List module versions</a>
+    </li>
+    <li>
+      <a href="/myapp/1/resources/module/1.0.1">Get version 1.0.1 of module</a>
+    </li>
+    <li>
+      <a href="/myapp/1/resources/module/1.0.1/destroy">Destroy version x.y.z of module</a>
+    </li>
+    <li>
+    <form action="/myapp/1/resources/module/1.0.1/create" method="post">
+          Create version 1.0.1 of module
+          <input type="text" name="data" value="testo di prova"/>
+          <input type="submit" value="Try it" id="create"/> 
+    </form>
+    </li>
+    <li>
+    <form action="/myapp/1/resources/module/1.0.1/update" method="post">
+          Update version 1.0.1 of module
+          <input type="text" name="data" value="new testo di prova"/>
+          <input type="submit" value="Try it"/>
+    </form>
+    </li>
+    </ul>
+  </div>    
+  </body>
+</html>
