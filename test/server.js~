@@ -34,7 +34,7 @@ var echo = {
 app.use(connect.bodyParser());
 app.use(connect(connect.static(__dirname)));
 app.use(connect.router(rext_connect.routes({"prefix": prefix,"rext": rext})));
-app.use(connect.router(rext_connect.routes({"rext":echo}))).listen(port);
+app.use(connect.router(rext_connect.routes())).listen(port);
 
 console.log('Server running at http://127.0.0.1:' + port + '/');
 

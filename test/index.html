@@ -3,63 +3,79 @@
   <body id="index" onload="">
   <div>
     <h1>Default</h1>
-    <p>app.use(connect.router(rext_connect.routes()))</p>
-    <ul>
-    <li><a href="/rext/1/resources">List modules</a></li>
-    <li>
-      <a href="/rext/1/resources/module">List module versions</a>
-    </li>
-    <li>
-      <a href="/rext/1/resources/module/1.0.1">Get version 1.0.1 of module</a>
-    </li>
-    <li>
-      <a href="/rext/1/resources/module/1.0.1/destroy">Destroy version x.y.z of module</a>
-    </li>
-    <li>
+    <p>app.use(connect.router(rext_connect.routes({"rext":echo})))</p>
+    <div style="padding-left:20px">
+    <p>
+      - <a href="/rext/1/resources">List modules</a><br>
+      should return <em>{}</em>
+    </p>
+    <p>
+      - <a href="/rext/1/resources/module">List module versions</a><br>
+      should return <em>{"name": "module"}</em>
+    </p>
+    <p>
+      - <a href="/rext/1/resources/module/1.0.1">Get version 1.0.1 of module</a><br>
+      should return <em>{"name": "module", "version": "1.0.1"}</em>
+    </p>
+    <p>
+      - <a href="/rext/1/resources/module/1.0.1/destroy">Destroy version x.y.z of module</a><br>
+      should return <em>{"name": "module", "version": "1.0.1"}</em>
+    </p>
+    <p>
     <form action="/rext/1/resources/module/1.0.1/create" method="post">
-          Create version 1.0.1 of module
+          - Create version 1.0.1 of module
           <input type="text" name="data" value="testo di prova"/>
           <input type="submit" value="Try it" id="create"/> 
     </form>
-    </li>
-    <li>
+      should return <em>{"name": "module", "version": "1.0.1", "data": "testo di prova"}</em>
+    </p>
+    <p>
     <form action="/rext/1/resources/module/1.0.1/update" method="post">
-          Update version 1.0.1 of module
+          - Update version 1.0.1 of module
           <input type="text" name="data" value="new testo di prova"/>
           <input type="submit" value="Try it"/>
     </form>
-    </li>
-    </ul>
+        should return <em>{"name": "module", "version": "1.0.1", "data": "new testo di prova"}</em>
+    </p>
+    </div>
   </div>
   <div>
     <h1>Myapp</h1>
-    <p>app.use(connect.router(rext_connect.routes({"prefix":prefix,"rext":rext})))</p>
-    <ul>
-    <li><a href="/myapp/1/resources">List modules</a></li>
-    <li>
-      <a href="/myapp/1/resources/module">List module versions</a>
-    </li>
-    <li>
-      <a href="/myapp/1/resources/module/1.0.1">Get version 1.0.1 of module</a>
-    </li>
-    <li>
-      <a href="/myapp/1/resources/module/1.0.1/destroy">Destroy version x.y.z of module</a>
-    </li>
-    <li>
+    <p>app.use(connect.router(rext_connect.routes({"prefix":"myapp","rext":rext})))</p>
+    <div style="padding-left:20px">
+    <p>
+      - <a href="/myapp/1/resources">List modules</a> <br>
+      should return <em>myappLIST {}</em>
+    </p>
+    <p>
+      - <a href="/myapp/1/resources/module">List module versions</a> <br>
+      should return <em>myappLIST {"name": "module"}</em>
+    </p>
+    <p>
+      - <a href="/myapp/1/resources/module/1.0.1">Get version 1.0.1 of module</a> <br>
+      should return <em>myappRETRIEVE {"name": "module", "version": "1.0.1"}</em>
+    </p>
+    <p>
+      - <a href="/myapp/1/resources/module/1.0.1/destroy">Destroy version x.y.z of module</a>
+      should return <em>myappDESTROY {"name": "module", "version": "1.0.1"}</em>
+    </p>
+    <p>
     <form action="/myapp/1/resources/module/1.0.1/create" method="post">
-          Create version 1.0.1 of module
+          - Create version 1.0.1 of module
           <input type="text" name="data" value="testo di prova"/>
           <input type="submit" value="Try it" id="create"/> 
     </form>
-    </li>
-    <li>
+      should return <em>myappCREATE {"name": "module", "version": "1.0.1", "data": "testo di prova"}</em>
+    </p>
+    <p>
     <form action="/myapp/1/resources/module/1.0.1/update" method="post">
-          Update version 1.0.1 of module
+          - Update version 1.0.1 of module
           <input type="text" name="data" value="new testo di prova"/>
           <input type="submit" value="Try it"/>
     </form>
-    </li>
-    </ul>
+        should return <em>myappUPDATE {"name": "module", "version": "1.0.1", "data": "new testo di prova"}</em>
+    </p>
+    </div>
   </div>    
   </body>
 </html>

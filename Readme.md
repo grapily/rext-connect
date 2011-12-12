@@ -1,24 +1,23 @@
 
 # Rext-connect
 
-  A simpler rext's connect router middleware
+  Simple Rext router middleware for [connect](http://senchalabs.github.com/connect "connect")
   
-![image alt](link)
-
+  
 ## How to use
   
-  var connect = require('connect')
-    , rext_connect = require('rext-connect');
+    var connect = require('connect')
+      , rext_connect = require('rext-connect');
   
-  app.use(connect.bodyParser());
-  app.use(connect.router(rext_connect.routes({"prefix":'myapp',"rext":rext})));
+    app.use(connect.bodyParser());
+    app.use(connect.router(rext_connect.routes({"prefix":'myapp',"rext":rext})));
   
 
 ## Running node tests
 
   Install dependencies:
   
-     $ npm install -d
+    $ npm install -d
   
   Run them!
   
