@@ -1,9 +1,9 @@
 {
     "name": "rext-connect"
-  , "version": "0.0.4"
-  , "description": "Add rext route to connect"
-  , "keywords": "Grapily <dev.grapily.com>"
-  , "author": [""]
+  , "version": "0.0.5"
+  , "description": "Add rext routes to connect"
+  , "author": "Grapily <dev.grapily.com>"
+  , "keywords": ["middleware", "connect", "router"]
   , "dependencies": {
       "rext": ">= 0.0.5"
     }
