@@ -1,8 +1,7 @@
 
 # Rext-connect
 
-  Simple Rext router middleware for [connect](http://senchalabs.github.com/connect "connect")
-  
+  Simple [rext](https://github.com/grapily/rext) router middleware for [connect](http://senchalabs.github.com/connect "connect")
   
 ## How to use
   
@@ -11,7 +10,6 @@
   
     app.use(connect.bodyParser());
     app.use(connect.router(rext_connect.routes({"prefix":'myapp',"rext":rext})));
-  
 
 ## Running node tests
 
@@ -21,8 +19,7 @@
   
   Run them!
   
-    $ make server-test
-
+    $ make test-server
 
 ## License 
 

@@ -1,6 +1,6 @@
 {
     "name": "rext-connect"
-  , "version": "0.0.1"
+  , "version": "0.0.3"
   , "description": "Add rext route to connect"
   , "keywords": "Grapily <dev.grapily.com>"
   , "author": [""]
