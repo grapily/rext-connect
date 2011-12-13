@@ -1,12 +1,13 @@
 {
     "name": "rext-connect"
-  , "version": "0.0.1"
+  , "version": "0.0.3"
   , "description": "Add rext route to connect"
   , "keywords": "Grapily <dev.grapily.com>"
   , "author": [""]
   , "dependencies": {}
   , "devDependencies": {
-       "connect": "1.8.2" 
+        "connect": "1.8.2"
+      , "rext": ">= 0.0.5"
   }
   , "main": "./index.js"
   , "engines": { "node": ">= 0.4.0 < 0.7.0" }

@@ -1,5 +1,8 @@
-
+REPODIR = test/repo
 SRC = lib/rest-connect.js
 
-test-server:
+$(REPODIR):
+	mkdir -p $(REPODIR)
+    
+test-server: $(REPODIR)
 	@node test/server
